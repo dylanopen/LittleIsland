@@ -1,0 +1,36 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ],
+		"workbench.colorCustomizations":
+		{
+			"[Monokai]":
+			{
+				"editor.background": "#12171e",
+				"sideBar.background": "#090c10",
+				"activityBar.activeBackground": "#224466",
+				"activityBar.activeBorder": "#007fff",
+				"sideBar.border": "#333333",
+				"activityBar.background": "#0D1117",
+				"statusBar.background": "#000000",
+				"tab.activeBackground": "#0D1117",
+				"tab.inactiveBackground": "#272f3b",
+				"sideBarSectionHeader.background": "#090c10",
+			}
+		},
+
+		"editor.tokenColorCustomizations": {
+			"[Monokai]": {
+				"comments": "#bbb",
+				"functions": "#fd3",
+				"keywords": "#0ff",
+				"numbers": "#fa0",
+				"strings": "#f60",
+				"variables": "#fff",
+				"types": "#0f0"
+			}
+		}
+
+}
