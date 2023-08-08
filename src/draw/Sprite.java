@@ -19,7 +19,7 @@ public class Sprite
 
 	public void draw()
 	{
-		
+		System.out.println(image.toString());
 	}
 	
 }

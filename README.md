@@ -1,18 +1,17 @@
-## Getting Started
+# Welcome to Little Island!
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This is a simple game about gathering resources, building a base, and fighting monsters.
 
-## Folder Structure
+It takes some inspiration from Minecraft, as it acts as a sandbox where you can build, craft, mine, fight monsters, or anything else!
 
-The workspace contains two folders by default, where:
+## Modding Little Island
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Little Island supports basic mods, in the form of `.li` files.
+These files are essentially JSON files with some added functionality.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+By creating an `li` file, you can easily add items, modify existing ones, change game variables, etc.  
+For help creating mods, have a look at [this documentation page](docs/mods.md)
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+If you would like to do more advanced modding, please consider [creating your own Little Island distro](docs/create-a-distro.md).
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+You can redistribute your distro and even sell it if you want to!

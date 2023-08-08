@@ -2,6 +2,8 @@ package draw;
 
 import javax.swing.JFrame;
 
+import config.Data;
+
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Container;
@@ -34,6 +36,8 @@ public class Window
 		// Add the canvas to the frame:
 		frame.add(canvas);
 		frame.pack();
+
+		Data.window = this;
 	}
 
 	// Fill the screen with a specific colour:
