@@ -2,6 +2,7 @@ package littleisland.game;
 
 import littleisland.data.World;
 import littleisland.node.Player;
+import littleisland.node.TileHighlight;
 import realms.node.TileWorldNode;
 import realms.window.Realm;
 
@@ -18,4 +19,5 @@ public class Game
 	public static World worldInfo;
 	public static TileWorldNode tileWorld;
 	public static Player player;
+	public static TileHighlight tileHighlight;
 }

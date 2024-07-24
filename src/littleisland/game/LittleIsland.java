@@ -3,6 +3,7 @@ package littleisland.game;
 import littleisland.data.World;
 import littleisland.node.KeyHandler;
 import littleisland.node.Player;
+import littleisland.node.TileHighlight;
 import littleisland.res.Textures;
 import realms.window.Loop;
 import realms.window.Realm;
@@ -22,6 +23,7 @@ public class LittleIsland
 		Game.player = new Player();
 		new KeyHandler();
 		Game.player.displace(8, 8, 1);
+		Game.tileHighlight = new TileHighlight();
 
 		Game.realm.run(new Loop());
 	}
