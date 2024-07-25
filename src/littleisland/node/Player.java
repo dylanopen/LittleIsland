@@ -14,9 +14,9 @@ import java.util.stream.IntStream;
 
 public class Player extends Node
 {
-	public static double initialX = Game.WINDOW_WIDTH / 2.0 - Game.PLAYER_SIZE;
-	public static double initialY = Game.WINDOW_HEIGHT / 2.0 - Game.PLAYER_SIZE;
-	public static int animationFrequency = 30;
+	public static double initialX = Game.WINDOW_WIDTH / 2.0 - Game.PLAYER_SIZE/2.0;
+	public static double initialY = Game.WINDOW_HEIGHT / 2.0 - Game.PLAYER_SIZE/2.0;
+	public static int animationFrequency = 45;
 
 	public DirectionAnimatedSpriteNode sprite;
 	private double velocityX, velocityY;
@@ -53,6 +53,14 @@ public class Player extends Node
 		sprite.y += dispY;
 	}
 
+	public void setPosition(double tileX, double tileY)
+	{
+		Game.realm.cameraX = tileX * Game.TILE_SIZE - Game.realm.getWindow().getWidth()/2.0;
+		Game.realm.cameraY = tileY * Game.TILE_SIZE - Game.realm.getWindow().getHeight()/2.0;
+		sprite.x = tileX * Game.TILE_SIZE + Player.initialX - Game.realm.getWindow().getWidth()/2.0;
+		sprite.y = tileY * Game.TILE_SIZE + Player.initialY - Game.realm.getWindow().getHeight()/2.0;
+	}
+
 	private void updateVelocity()
 	{
 		playerSpeed = Game.PLAYER_SPEED;
@@ -61,7 +69,7 @@ public class Player extends Node
 		velocityY = 0;
 
 		if (Keyboard.isDown(KeyEvent.VK_QUOTE))
-			playerSpeed *= 5.0;
+			playerSpeed *= Game.PLAYER_SPRINT_MULTIPLIER;
 
 		if (Keyboard.isDown(KeyEvent.VK_W))
 			velocityY -= 1.0;

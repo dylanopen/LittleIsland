@@ -22,7 +22,7 @@ public class LittleIsland
 		Game.tileWorld = Game.worldInfo.toTileWorld();
 		Game.player = new Player();
 		new KeyHandler();
-		Game.player.displace(8, 8, 1);
+		Game.player.setPosition(24, 16);
 		Game.tileHighlight = new TileHighlight();
 
 		Game.realm.run(new Loop());

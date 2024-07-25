@@ -14,6 +14,7 @@ public class Game
 	public static final int TILE_SIZE = 64;
 	public static final int PLAYER_SIZE = 48;
 	public static final double PLAYER_SPEED = 5.0;
+	public static final double PLAYER_SPRINT_MULTIPLIER = 3.0;
 
 	public static Realm realm;
 	public static World worldInfo;
