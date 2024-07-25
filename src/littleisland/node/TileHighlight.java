@@ -13,8 +13,8 @@ public class TileHighlight extends Node
 	public static Colour fillColour = new Colour(255, 255, 255, 32);
 	public static Colour outlineColour = new Colour(255, 255, 255);
 
-	private RectangleNode fill;
-	private RectangleOutlineNode outline;
+	private final RectangleNode fill;
+	private final RectangleOutlineNode outline;
 
 	public TileHighlight()
 	{
@@ -28,11 +28,12 @@ public class TileHighlight extends Node
 	public void update()
 	{
 		super.update();
-		int tileX = (int) (Mouse.x + Game.realm.cameraX) / Game.TILE_SIZE;
-		int tileY = (int) (Mouse.y + Game.realm.cameraY) / Game.TILE_SIZE;
+		int tileX = TileInfo.getTileXOnScreen(Mouse.x);
+		int tileY = TileInfo.getTileYOnScreen(Mouse.y);
 		x = tileX * Game.TILE_SIZE;
 		y = tileY * Game.TILE_SIZE;
 
-		visible = TileInfo.playerCanReach((int)tileX, (int)tileY);
+		// only show if in reach
+		visible = TileInfo.playerCanReach(tileX, tileY);
 	}
 }

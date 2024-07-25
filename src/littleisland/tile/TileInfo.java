@@ -31,4 +31,26 @@ public class TileInfo
 			return false;
 		return true;
 	}
+
+	public static int getTileXOnScreen(int screenX)
+	{
+		return (int) (screenX + Game.realm.cameraX) / Game.TILE_SIZE;
+	}
+
+	public static int getTileYOnScreen(int screenY)
+	{
+		return (int) (screenY + Game.realm.cameraY) / Game.TILE_SIZE;
+	}
+
+	public static double miningSpeed(int tileType)
+	{
+		return switch (tileType) {
+			case 20 // stone
+				-> 0.5; // lower number = slower mining
+			case 21 // small tree
+				-> 1.2; // higher number = faster mining
+			default // anything else
+				-> 0.0; // unbreakable
+		};
+	}
 }

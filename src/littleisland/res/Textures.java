@@ -14,10 +14,13 @@ public class Textures
 	public static Texture[] playerLeftFrames;
 	public static Texture[] playerRightFrames;
 
+	public static Texture[] miningFrames;
+
 	public static void load() throws IOException
 	{
 		loadTiles();
 		loadPlayerSprites();
+		loadMiningSprites();
 	}
 
 	public static void loadTiles() throws IOException
@@ -65,6 +68,22 @@ public class Textures
 		playerRightFrames = new Texture[]{
 			new Texture("player/right1.png"),
 			new Texture("player/right2.png"),
+		};
+	}
+
+	public static void loadMiningSprites() throws IOException
+	{
+		miningFrames = new Texture[]{
+			new Texture("mining/0.png"),
+			new Texture("mining/1.png"),
+			new Texture("mining/2.png"),
+			new Texture("mining/3.png"),
+			new Texture("mining/4.png"),
+			new Texture("mining/5.png"),
+			new Texture("mining/6.png"),
+			new Texture("mining/7.png"),
+			new Texture("mining/8.png"),
+			new Texture("mining/9.png"),
 		};
 	}
 }

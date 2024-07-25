@@ -1,6 +1,7 @@
 package littleisland.game;
 
 import littleisland.data.World;
+import littleisland.node.Mining;
 import littleisland.node.Player;
 import littleisland.node.TileHighlight;
 import realms.node.TileWorldNode;
@@ -21,4 +22,5 @@ public class Game
 	public static TileWorldNode tileWorld;
 	public static Player player;
 	public static TileHighlight tileHighlight;
+	public static Mining mining;
 }
